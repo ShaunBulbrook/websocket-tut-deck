@@ -1,0 +1,17 @@
+{
+  "name": "socket-tutorial",
+  "version": "0.0.0",
+  "description": "",
+  "main": "deck.mdx",
+  "scripts": {
+    "start": "mdx-deck deck.mdx"
+  },
+  "author": "Shaun Bulbrook",
+  "license": "MIT",
+  "devDependencies": {
+    "mdx-deck": "^1.5.10"
+  },
+  "dependencies": {
+    "react": "^16.4.2"
+  }
+}
