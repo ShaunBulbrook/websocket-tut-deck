@@ -88,10 +88,7 @@ class ChatInput extends React.Component {
 	//////////////////////////////////
 
 	socketConnect() {
-		this.socket = io('localhost:4001');
-		this.socket.on('disconnect', () => {
-			this.socket.open();
-		});
+		//
 	}
 	/**
 	 * Called on a keypress event with focus in the message field

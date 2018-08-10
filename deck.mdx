@@ -155,7 +155,7 @@ import io from 'socket.io-client';
 this.socket = io('http://10.193.176.165:4001');
 /* Fire an addEventListener
 */
-this.socket.emit('new message', {
+this.socket.emit('new message authored', {
 	author: 'Your name',
 	message: 'Your Message',
 });
