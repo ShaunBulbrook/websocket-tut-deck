@@ -159,28 +159,7 @@ export default Split
 
 <ChatWindow />
 
-```javascript
-import io from 'socket.io-client';
-/* Open a socket
-*/
-this.socket = io('http://10.193.176.165:4001');
-/* Fire an addEventListener
-*/
-this.socket.emit('new message authored', {
-	author: 'Your name',
-	message: 'Your Message',
-});
-/*Handle the response!
-*/
-this.socket.on('update chat', (data) => {
-	/*
-	data: {
-		author: String;
-		message: String;
-	}
-	*/
-})
-
+![](./images/chat-window-instructions.png)
 ---
 ## Further reading
 
