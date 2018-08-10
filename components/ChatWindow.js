@@ -16,7 +16,8 @@ const StyledChatWindowContainer = styled.div`
 	overflow-y: auto;
 	padding: 20px;
 	transition: all 1s ease-in;
-	height: 500px;
+	height: 800px;
+	width: 90%;
 
 	::-webkit-scrollbar {
     	display: none;
@@ -65,8 +66,8 @@ class ChatWindow extends React.Component {
 		this.state = {
 			chatHistory: [
 				{
-					author: 'clientTest',
-					message: 'test message from the same client',
+					author: 'Shaun',
+					message: 'Sup Dawgs!',
 				}
 			],
 		};

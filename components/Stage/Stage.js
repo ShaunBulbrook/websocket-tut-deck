@@ -57,7 +57,7 @@ class Stage extends React.Component {
 			velocityY: 0,
 			terminalVelocity: 5,
 			accl: 0.5,
-			color: 'blue',
+			color: ('#'+Math.floor(Math.random()*16777215).toString(16)),
 			bullets: [],
 		}
 		this.hero.offsetX = this.hero.width * -0.5;

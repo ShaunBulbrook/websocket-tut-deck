@@ -49,6 +49,7 @@ class ChatInput extends React.Component {
 		this.state = {
 			author: '',
 		}
+		//Who even needs yaab...😉
 		this.handleMessageKeyPress = this.handleMessageKeyPress.bind(this);
 		this.handleAuthorChange = this.handleAuthorChange.bind(this);
 	}
@@ -72,10 +73,17 @@ class ChatInput extends React.Component {
 			</StyledChatInputContainer>
 		);
 	}
-
+	/**
+	 * React cycle hook called when component has mounted.
+	 * @return void
+	 */
 	componentDidMount() {
 		this.socketConnect();
 	}
+
+	/////////////////////////
+	//Edit from here down //
+	/////////////////////////
 
 	socketConnect() {
 		this.socket = io('localhost:4001');
@@ -83,7 +91,11 @@ class ChatInput extends React.Component {
 			this.socket.open();
 		});
 	}
-
+	/**
+	 * Called on a keypress event with focus in the message field
+	 * @param  {obj} event
+	 * @return void
+	 */
 	handleMessageKeyPress(event) {
 		if(event.key === 'Enter') {
 			this.socket.emit('new message authored', {
@@ -93,7 +105,11 @@ class ChatInput extends React.Component {
 			event.target.value = '';
 		}
 	}
-
+	/**
+	 * Called when the author change field loses focus
+	 * @param  {obj} event
+	 * @return void
+	 */
 	handleAuthorChange(event) {
 		this.setState({
 			author: event.target.value
