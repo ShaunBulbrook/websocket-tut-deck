@@ -120,7 +120,7 @@ http://10.193.176.165:3000
 _Your turn..._
 ---
 ```bash
-git clone ***
+git clone https://github.com/ShaunBulbrook/socket-tut-chat-input.git
 npm install socket.io-client --save
 ```
 ---
@@ -129,7 +129,7 @@ First, import the socket.io client to your component...
 ```javascript
 import io from 'socket.io-client';
 //
-this.socket = io(***:4001);
+this.socket = io('http://10.193.176.165:4001');
 this.socket.emit('new message', {
 	author: 'Your name',
 	message: 'Your Message',
@@ -148,7 +148,28 @@ export default Split
 
 <ChatWindow />
 
-sdfsdfsdfsdf
+```javascript
+import io from 'socket.io-client';
+/* Open a socket
+*/
+this.socket = io('http://10.193.176.165:4001');
+/* Fire an addEventListener
+*/
+this.socket.emit('new message', {
+	author: 'Your name',
+	message: 'Your Message',
+});
+/*Handle the response!
+*/
+this.socket.on('update chat', (data) => {
+	/*
+	data: {
+		author: String;
+		message: String;
+	}
+	*/
+})
+
 ---
 # Further reading
 
