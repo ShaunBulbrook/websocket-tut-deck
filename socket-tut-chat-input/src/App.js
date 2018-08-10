@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import io from 'socket.io-client';
 
@@ -97,10 +96,7 @@ class ChatInput extends React.Component {
 	 */
 	handleMessageKeyPress(event) {
 		if(event.key === 'Enter') {
-			this.socket.emit('new message authored', {
-				author: this.state.author,
-				message: event.target.value,
-			});
+			//
 			event.target.value = '';
 		}
 	}
