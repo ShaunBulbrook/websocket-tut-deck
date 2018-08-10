@@ -1,6 +1,9 @@
+export { default as theme } from './theme';
+import { Split, SplitRight } from 'mdx-deck/layouts'
 
 # Web Sockets and Socket.io
-_The best integrated bi-directional transport protocol since Flash, Silverlight and Java did their things..._
+
+> The best integrated bi-directional transport protocol since Flash, Silverlight and Java did their things...
 
 ```notes
 Welcome.
@@ -20,12 +23,18 @@ With the API, the user is able to send messages to a server and recieve event-dr
 Realtime communication between a browser and a server.
 ```
 ---
-<img src="./images/ajax.jpg" height="600" />
-Vs.
-<img src="./images/socket.jpg" height="600" />
+
+export default Split
+
+![](./images/ajax.jpg)
+
+Versus..
+
+![](./images/socket.jpg)
+
 ---
-<img src="./images/http-diagram.jpeg" />
-<img src="./images/web-socket-diagram.jpeg" />
+![](./images/http-diagram.jpeg)
+![](./images/web-socket-diagram.jpeg)
 ---
 # A quick history of the Web Socket...
 
@@ -33,7 +42,7 @@ Vs.
 Starting from Early 2008...
 ```
 ---
-<img src="./images/cometbook.jpg" />
+![](./images/cometbook.jpg)
 
 ```notes
 Before the Web Socket there was Comet.
@@ -41,7 +50,7 @@ The Comet library was the AJAX solution that aimed to make applications behave a
 Referred to as Long-polling or Reverse AJAX.
 ```
 ---
-<img src="./images/michael-carter.png" />
+![](./images/michael-carter.png)
 
 Michael Carter
 
@@ -56,7 +65,7 @@ Michael worked on the comet library.
 First referred to as the TCPConnection or the TCP-based socket API. Michael takes into the WHATWG IRC channel.
 ```
 ---
-<img src="./images/Ian_Hickson.jpeg" />
+![](./images/Ian_Hickson.jpeg)
 
 Ian Hickson
 
@@ -65,13 +74,13 @@ Ian Hickson - One of the more well known spec writers on the html5 spec. Spokesp
 Michael Carter collaborates with Ian Hickson to further develop the spec.
 ```
 ---
-<img src="./images/ircwebsocketlog.png" />
+![](./images/ircwebsocketlog.png)
 
 ```notes
 June 2008 TCPConnection is renamed as Web socket and by early July is referenced as such in the HTML5 spec.
 ```
 ---
-<img src="./images/chrome.jpeg" />
+![](./images/chrome.jpeg)
 
 ```notes
 The next big news happens a year and a half later.
@@ -79,7 +88,7 @@ December 2009 - Google Chrome 4 releases on the developer stream with the first 
 On January 25th 2010 sees Chrome 4's public release and Web Sockets are in the wild for the first time.
 ```
 ---
-<img src="./images/IETF.jpg" />
+![](./images/IETF.jpg)
 
 ```notes
 In Febuary of the same year, Hickson takes the standard to the IETF (Internet Engineering Task Force) where two revisions were authored under him.
@@ -88,7 +97,7 @@ Fette is joined by Alexy Melnikov and together they release further updates from
 In December 2011 Fette and Melnikov release the final version of the RFC specification.
 ```
 ---
-Browser Deployment
+# Browser deployment
 
 ```notes
 - Public deployments
@@ -100,19 +109,22 @@ Opera 12.10 - November 5, 2012
 ```
 
 ---
-<img src="./images/socket-io.jpg" />
+![](./images/socket-io.jpg)
 
-What was that Socket.io thing?
+> What was that Socket.io thing?
 ---
-<img src="./images/snippet1.png" height="700"/>
+![](./images/snippet1.png)
 ---
-# In action!
+
+export default SplitRight
 
 import Stage from './components/Stage/Stage';
 
 <Stage width={600} height={600} />
 
-http://10.193.176.165:3000
+# In action!
+
+`http://10.193.176.165:3000`
 
 ---
 # Using Websockets
@@ -138,10 +150,9 @@ this.socket.emit('new message', {
 ---
 The server looks like...
 
-<img src="./images/chatserverimage.png" />
+![](./images/chatserverimage.png)
 
 ---
-import { Split } from 'mdx-deck/layouts'
 import ChatWindow from './components/ChatWindow';
 
 export default Split
@@ -171,16 +182,31 @@ this.socket.on('update chat', (data) => {
 })
 
 ---
-# Further reading
+## Further reading
 
-Context
-- http://html5doctor.com/interview-with-ian-hickson-html-editor/
-- https://krijnhoetmer.nl/irc-logs/whatwg/20080618
-- https://lists.w3.org/Archives/Public/public-whatwg-archive/2008Jun/0165.html
+### Context
 
-Websockets
-- https://tools.ietf.org/html/draft-hixie-thewebsocketprotocol-75
-- https://developer.mozilla.org/en-US/docs/Web/API/WebSocket
 
-Socket.IO
-- https://socket.io
+http://html5doctor.com/interview-with-ian-hickson-html-editor/
+
+https://krijnhoetmer.nl/irc-logs/whatwg/20080618
+
+https://lists.w3.org/Archives/Public/public-whatwg-archive/2008Jun/0165.html
+
+---
+## Further reading
+
+### Websockets
+
+
+https://tools.ietf.org/html/draft-hixie-thewebsocketprotocol-75
+
+https://developer.mozilla.org/en-US/docs/Web/API/WebSocket
+
+---
+## Further reading
+
+### Socket.io
+
+
+https://socket.io
